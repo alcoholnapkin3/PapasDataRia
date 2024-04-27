@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PapasDataRia", "PapasDataRia.csproj", "{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AD15080-35CB-4248-AEE3-23F9A6611832}
+	EndGlobalSection
+EndGlobal
