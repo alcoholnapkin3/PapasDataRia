@@ -1,0 +1,11 @@
+C:\Users\cumslut\Documents\PapasDataRia\bin\Debug\PapasDatabase.mdf
+C:\Users\cumslut\Documents\PapasDataRia\bin\Debug\PapasDatabase_log.ldf
+C:\Users\cumslut\Documents\PapasDataRia\bin\Debug\PapasDataRia.exe.config
+C:\Users\cumslut\Documents\PapasDataRia\bin\Debug\PapasDataRia.exe
+C:\Users\cumslut\Documents\PapasDataRia\bin\Debug\PapasDataRia.pdb
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.csproj.AssemblyReference.cache
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.Properties.Resources.resources
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.csproj.GenerateResource.cache
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.csproj.CoreCompileInputs.cache
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.exe
+C:\Users\cumslut\Documents\PapasDataRia\obj\Debug\PapasDataRia.pdb

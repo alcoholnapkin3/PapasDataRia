@@ -1,15 +1,23 @@
 ﻿CREATE TABLE SushiRecipies (
-	sushi_id char(2) constraint sushi_id_is_pkey primary key,
-	sushi_name nvarchar(30) constraint sushi_name_is_unique unique,
-	sushi_rice char(2) constraint sushi_rice_not_null not null references SushiRices(sushi_rice_id),
-	sushi_wrap char(2) constraint sushi_wrap_not_null not null references SushiWraps(sushi_wrap_id),
-	sushi_fipped bit,
+	id char(2) primary key,
+	name nvarchar(30) unique not null,
+	rice char(2) not null references SushiRices(id),
+	wrap char(2) not null references SushiWraps(id),
+	flipped bit,
 
-	sushi_1st_filling char(2) constraint pizza_filling_not_null not null references SushiFillings(sushi_filling_id),
-	sushi_2nd_filling char(2) references SushiFillings(sushi_filling_id),
-	sushi_3rd_filling char(2) references SushiFillings(sushi_filling_id),
+	filling_1st char(2) not null references SushiFillings(id),
+	filling_2nd char(2) references SushiFillings(id),
+	filling_3rd char(2) references SushiFillings(id),
 
-	sushi_topping char(2) references SushiToppings(sushi_topping_id),
-	sushi_shaker char(2) references SushiShakers(sushi_shaker_id),
-	sushi_sauce char(2) references SushiSauce(sushi_sauce_id)
+	topping char(2) references SushiToppings(id),
+	shaker char(2) references SushiShakers(id),
+	sauce char(2) references SushiSauce(id)
 	)
+
+INSERT INTO SushiRecipies values
+	('T1', 'Test recipie 1', 'WH', 'NO', 0, 'SA', 'CU', NULL, 'MA', NULL, 'DU'),
+	('T2', 'Test recipie 2', 'BR', 'NO', 1, 'CR', 'CU', 'CA', NULL, 'SE', 'TS'),
+	('T3', 'Test recipie 3', 'SH', 'US', 1, 'CA', 'SA', NULL, 'SA', NULL, NULL),
+	('T4', 'Test recipie 4', 'BL', 'MS', 0, 'SA', NULL, NULL, 'KI', 'TO', 'TE');
+
+

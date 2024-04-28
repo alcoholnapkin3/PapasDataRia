@@ -1,28 +1,35 @@
 ﻿CREATE TABLE DonutsRecipies (
-	donuts_id char(2) constraint donuts_id_is_pkey primary key,
-	donuts_name nvarchar(30) constraint donuts_name_is_unique unique,
+	id char(2) primary key,
+	name nvarchar(30) unique not null,
+	/* три пончика в порции, далее: тесто для первого, второго и третьего пончика соответственно */
+	dough_1st char(2) not null references DonutDoughs(id),
+	dough_2ns char(2) not null references DonutDoughs(id),
+	dough_3rd char(2) not null references DonutDoughs(id),
+	/* аналогично */
+	shape_1st char(2) not null references DonutShapes(id),
+	shape_2nd char(2) not null references DonutShapes(id),
+	shape_3rd char(2) not null references DonutShapes(id),
 
-	donut1_dough char(2) constraint donut1_dough_not_null not null references DonutDoughs(donut_dough_id),
-	donut2_dough char(2) constraint donut2_dough_not_null not null references DonutDoughs(donut_dough_id),
-	donut3_dough char(2) constraint donut3_dough_not_null not null references DonutDoughs(donut_dough_id),
+	filling_1st char(2) references DonutFillings(id),
+	filling_2nd char(2) references DonutFillings(id),
+	filling_3rd char(2) references DonutFillings(id),
 
-	donut1_shape char(2) constraint donut1_shape_not_null not null references DonutShapes(donut_shape_id),
-	donut2_shape char(2) constraint donut2_shape_not_null not null references DonutShapes(donut_shape_id),
-	donut3_shape char(2) constraint donut3_shape_not_null not null references DonutShapes(donut_shape_id),
+	icing_or_powder_1st char(2) not null references DonutIcingsAndPowders(id),
+	icing_or_powder_2nd char(2) not null references DonutIcingsAndPowders(id),
+	icing_or_powder_3rd char(2) not null references DonutIcingsAndPowders(id),
 
-	donut1_filling char(2) references DonutFillings(donut_filling_id),
-	donut2_filling char(2) references DonutFillings(donut_filling_id),
-	donut3_filling char(2) references DonutFillings(donut_filling_id),
+	sprinkle_or_drizzle_1st char(2) not null references DonutSprinklesAndDrizzles(id),
+	sprinkle_or_drizzle_2nd char(2) not null references DonutSprinklesAndDrizzles(id),
+	sprinkle_or_drizzle_3rd char(2) not null references DonutSprinklesAndDrizzles(id),
 
-	donut1_icing_or_powder char(2) constraint donut1_icing_or_powder_not_null not null references DonutIcingsAndPowders(donut_icing_or_powder_id),
-	donut2_icing_or_powder char(2) constraint donut2_icing_or_powder_not_null not null references DonutIcingsAndPowders(donut_icing_or_powder_id),
-	donut3_icing_or_powder char(2) constraint donut3_icing_or_powder_not_null not null references DonutIcingsAndPowders(donut_icing_or_powder_id),
-
-	donut1_1st_sprinkle_or_drizzle char(2) constraint donut1_1st_sprinkle_or_drizzle_not_null not null references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id),
-	donut2_1st_sprinkle_or_drizzle char(2) constraint donut2_1st_sprinkle_or_drizzle_not_null not null references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id),
-	donut3_1st_sprinkle_or_drizzle char(2) constraint donut3_1st_sprinkle_or_drizzle_not_null not null references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id),
-
-	donut1_2nd_sprinkle_or_drizzle char(2) references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id),
-	donut2_2nd_sprinkle_or_drizzle char(2) references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id),
-	donut3_2nd_sprinkle_or_drizzle char(2) references DonutSprinklesOrDrizzles(donut_sprinkle_or_drizzle_id)
+	extra_sprinkle_or_drizzle_1st char(2) references DonutSprinklesAndDrizzles(id),
+	extra_sprinkle_or_drizzle_2nd char(2) references DonutSprinklesAndDrizzles(id),
+	extra_sprinkle_or_drizzle_3rd char(2) references DonutSprinklesAndDrizzles(id)
 	)
+
+INSERT INTO DonutsRecipies values
+/*   id    name              dough dough dough shape shape shape fill  fill  fill  icing icing icing drizz drizz drizz extra extra extra */
+	('T1', 'Test Recipie 1', 'RE', 'RE', 'PU', 'RI', 'RO', 'RI', NULL, NULL, NULL, 'CH', 'VA', 'SU', 'CA', 'BA', 'CH', 'RA', NULL, NULL),
+	('T2', 'Test Recipie 2', 'RE', 'CH', 'CH', 'RO', 'RO', 'RI', 'CH', 'ST', 'CH', 'SU', 'CH', 'ST', 'CA', 'RA', 'BA', 'CH', NULL, NULL),
+	('T3', 'Test Recipie 3', 'RE', 'PU', 'RE', 'RI', 'RO', 'FC', NULL, 'BO', 'ST', 'CH', 'SU', 'ST', 'BA', 'CH', 'RA', 'RA', NULL, NULL),
+	('T4', 'Test Recipie 4', 'RE', 'RE', 'CH', 'LJ', 'LJ', 'RI', 'BO', 'CH', NULL, 'CH', 'CH', 'SU', 'RA', 'CA', 'CH', NULL, 'CH', NULL)

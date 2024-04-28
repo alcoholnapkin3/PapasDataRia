@@ -1,19 +1,28 @@
 ﻿CREATE TABLE PizzaRecipies (
-	pizza_id char(2) constraint pizza_id_is_pkey primary key,
-	pizza_name nvarchar(30) constraint pizza_name_is_unique unique,
-	pizza_crust char(2) constraint pizza_crust_not_null not null references PizzaCrusts(pizza_crust_id),
-	pizza_sauce char(2) constraint pizza_sauce_not_null not null references PizzaSauses(pizza_sauce_id),
-	pizza_cheese char(2) constraint pizza_cheese_not_null not null references PizzaCheeses(pizza_cheese_id),
-	pizza_1st_topping char(2) constraint pizza_topping_not_null not null references PizzaToppings(pizza_topping_id),
-	pizza_1st_ammount tinyint constraint pizza_ammount_not_null not null,
-	pizza_1st_location char(2) constraint pizza_location_not_null not null references PizzaLocations(pizza_location_id),
-	pizza_2nd_topping char(2) references PizzaToppings(pizza_topping_id),
-	pizza_2nd_ammount tinyint,
-	pizza_2nd_location char(2) references PizzaLocations(pizza_location_id),
-	pizza_3rd_topping char(2) references PizzaToppings(pizza_topping_id),
-	pizza_3rd_ammount tinyint,
-	pizza_3rd_location char(2) references PizzaLocations(pizza_location_id),
-	pizza_4th_topping char(2) references PizzaToppings(pizza_topping_id),
-	pizza_4th_ammount tinyint,
-	pizza_4th_location char(2) references PizzaLocations(pizza_location_id)
-	)
+	id char(2) primary key,
+	name nvarchar(30) unique not null,
+	crust char(2) not null references PizzaCrusts(id),
+	sauce char(2) not null references PizzaSauces(id),
+	cheese char(2) not null references PizzaCheeses(id),
+	topping_1st char(2 ) not null references PizzaToppings(id),
+	ammount_1st tinyint not null,
+	location_1st char(2) not null references PizzaLocations(id),
+	topping_2nd char(2) references PizzaToppings(id),
+	ammount_2nd tinyint,
+	location_2nd char(2) references PizzaLocations(id),
+	topping_3rd char(2) references PizzaToppings(id),
+	ammount_3rd tinyint,
+	location_3rd char(2) references PizzaLocations(id),
+	topping_4th char(2) references PizzaToppings(id),
+	ammount_4th tinyint,
+	location_4th char(2) references PizzaLocations(id)
+	);
+
+INSERT INTO PizzaRecipies (id, name, crust, sauce, cheese, topping_1st, ammount_1st, location_1st, topping_2nd, ammount_2nd, location_2nd) values
+	('T1', 'Test recipie 1', 'TR', 'CG', 'PB', 'SA', 4, 'R',  'PE', 4, 'L');
+INSERT INTO PizzaRecipies (id, name, crust, sauce, cheese, topping_1st, ammount_1st, location_1st, topping_2nd, ammount_2nd, location_2nd, topping_3rd, ammount_3rd, location_3rd) values
+	('T2', 'Test recipie 2', 'GK', 'MA', 'PV', 'PE', 8, 'AO', 'ON', 4, 'T', 'MU', 4, 'AO');
+INSERT INTO PizzaRecipies (id, name, crust, sauce, cheese, topping_1st, ammount_1st, location_1st, topping_2nd, ammount_2nd, location_2nd, topping_3rd, ammount_3rd, location_3rd, topping_4th, ammount_4th, location_4th) values
+	('T3', 'Test recipie 3', 'TH', 'BF', 'SC', 'MU', 6, 'LB', 'PE', 6, 'L', 'ON', 3, 'TR', 'SA', 8, 'AO');
+INSERT INTO PizzaRecipies (id, name, crust, sauce, cheese, topping_1st, ammount_1st, location_1st) values
+	('T4', 'Test recipie 4', 'CR', 'RR', 'GP', 'ON', 6, 'T');
