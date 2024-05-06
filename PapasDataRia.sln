@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PapasDataRia", "PapasDataRia.csproj", "{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}"
+	ProjectSection(SolutionItems) = preProject
+		CreatePizzaRecipiesView.sql = CreatePizzaRecipiesView.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
