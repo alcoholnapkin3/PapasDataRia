@@ -12,16 +12,19 @@ namespace PapasDataRia
 {
     public partial class CustomersForm : Form
     {
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Coding\test\PapasDataRia\PapasDatabase.mdf;Integrated Security=True";
+        private readonly DataLoader dataLoader;
         public CustomersForm()
         {
             InitializeComponent();
+            dataLoader = new DataLoader(connectionString);
+            this.Load += CustomersForm_Load;
         }
 
-        private void Customers_Load(object sender, EventArgs e)
+        private void CustomersForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "papasDatabaseDataSet.RegularCustomers". При необходимости она может быть перемещена или удалена.
-            this.regularCustomersTableAdapter.Fill(this.papasDatabaseDataSet.RegularCustomers);
-
+            dataLoader.UpdateView("RegularCustomersWithNames", "CreateRegularCustomersView.sql");
+            dataLoader.LoadDataFromView("RegularCustomersWithNames", dataGridView1);
         }
     }
 }
