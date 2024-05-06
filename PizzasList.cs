@@ -26,6 +26,7 @@ namespace PapasDataRia
 
         private void PizzasList_Load(object sender, EventArgs e)
         {
+            dataLoader.UpdateView("PizzaRecipiesWithNames", "CreatePizzaRecipiesView.sql");
             dataLoader.LoadDataFromView("PizzaRecipiesWithNames", dataGridView1);
         }
     }

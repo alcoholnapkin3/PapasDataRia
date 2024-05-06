@@ -1,4 +1,4 @@
-CREATE VIEW PizzaRecipiesWithNames AS
+﻿CREATE VIEW PizzaRecipiesWithNames AS
 SELECT
     pr.id,
     pr.name,

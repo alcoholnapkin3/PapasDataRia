@@ -18,7 +18,6 @@ namespace PapasDataRia
         {
             this.connectionString = connectionString;
         }
-
         public void LoadDataFromView(string viewName, DataGridView dataGridView)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -30,7 +29,6 @@ namespace PapasDataRia
                 dataGridView.DataSource = table;
             }
         }
-
         public void ExecuteSqlFile(string filePath)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -40,6 +38,41 @@ namespace PapasDataRia
                 using (SqlCommand command = new SqlCommand(script, connection))
                 {
                     command.ExecuteNonQuery();
+                }
+            }
+        }
+        public void UpdateView(string viewName, string sqlFilePath)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Проверяем, существует ли представление
+                using (SqlCommand checkCommand = new SqlCommand($"IF EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'{viewName}')) SELECT 1 ELSE SELECT 0", connection))
+                {
+                    int exists = (int)checkCommand.ExecuteScalar();
+
+                    if (exists == 0)
+                    {
+                        // Если представление не существует, создаем его
+                        using (SqlCommand createCommand = new SqlCommand(File.ReadAllText(sqlFilePath), connection))
+                        {
+                            createCommand.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        // Если представление существует, сначала удаляем его, а затем создаем заново
+                        using (SqlCommand dropCommand = new SqlCommand($"DROP VIEW {viewName}", connection))
+                        {
+                            dropCommand.ExecuteNonQuery();
+                        }
+
+                        using (SqlCommand createCommand = new SqlCommand(File.ReadAllText(sqlFilePath), connection))
+                        {
+                            createCommand.ExecuteNonQuery();
+                        }
+                    }
                 }
             }
         }

@@ -151,7 +151,6 @@
       <DependentUpon>CustomersList.cs</DependentUpon>
     </Compile>
     <Compile Include="DataLoader.cs" />
-    <Compile Include="DB.cs" />
     <Compile Include="DonutForm.cs">
       <SubType>Form</SubType>
     </Compile>

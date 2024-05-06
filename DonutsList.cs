@@ -12,16 +12,18 @@ namespace PapasDataRia
 {
     public partial class DonutsList : Form
     {
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Coding\test\PapasDataRia\PapasDatabase.mdf;Integrated Security=True";
+        private readonly DataLoader dataLoader;
         public DonutsList()
         {
             InitializeComponent();
+            dataLoader = new DataLoader(connectionString);
+            this.Load += DonutsList_Load;
         }
-
         private void DonutsList_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "papasDatabaseDataSet.DonutsRecipies". При необходимости она может быть перемещена или удалена.
-            this.donutsRecipiesTableAdapter.Fill(this.papasDatabaseDataSet.DonutsRecipies);
-
+            dataLoader.UpdateView("DonutRecipiesWithNames", "CreateDonutRecipiesView.sql");
+            dataLoader.LoadDataFromView("DonutRecipiesWithNames", dataGridView1);
         }
     }
 }

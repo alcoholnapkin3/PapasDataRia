@@ -14,10 +14,8 @@ namespace PapasDataRia
 {
     public partial class MainForm : Form
     {
-        private DB db;
         public MainForm()
         {
-            db = new DB();
             InitializeComponent();
         }
 

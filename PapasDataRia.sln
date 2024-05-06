@@ -7,7 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PapasDataRia", "PapasDataRi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}"
 	ProjectSection(SolutionItems) = preProject
+		CreateDonutsRecipesView.sql = CreateDonutsRecipesView.sql
 		CreatePizzaRecipiesView.sql = CreatePizzaRecipiesView.sql
+		CreateSandwichRecipiesView.sql = CreateSandwichRecipiesView.sql
+		CreateSushiRecipiesView.sql = CreateSushiRecipiesView.sql
 	EndProjectSection
 EndProject
 Global
