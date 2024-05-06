@@ -33,6 +33,7 @@
             this.pizzaRecipiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.papasDatabaseDataSet = new PapasDataRia.PapasDatabaseDataSet();
             this.pizzaRecipiesTableAdapter = new PapasDataRia.PapasDatabaseDataSetTableAdapters.PizzaRecipiesTableAdapter();
+            this.AddPizzaButton = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pizzaRecipiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.papasDatabaseDataSet)).BeginInit();
@@ -60,11 +61,27 @@
             // 
             this.pizzaRecipiesTableAdapter.ClearBeforeFill = true;
             // 
+            // AddPizzaButton
+            // 
+            this.AddPizzaButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddPizzaButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddPizzaButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddPizzaButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddPizzaButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddPizzaButton.ForeColor = System.Drawing.Color.White;
+            this.AddPizzaButton.Location = new System.Drawing.Point(615, 391);
+            this.AddPizzaButton.Name = "AddPizzaButton";
+            this.AddPizzaButton.Size = new System.Drawing.Size(180, 45);
+            this.AddPizzaButton.TabIndex = 1;
+            this.AddPizzaButton.Text = "Добавить рецепт пиццы";
+            this.AddPizzaButton.Click += new System.EventHandler(this.AddPizzaButton_Click);
+            // 
             // PizzasList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 448);
+            this.Controls.Add(this.AddPizzaButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PizzasList";
             this.Text = "PizzasList";
@@ -97,5 +114,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button AddPizzaButton;
     }
 }

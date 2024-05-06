@@ -138,6 +138,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComboBoxManager.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
