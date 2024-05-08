@@ -68,9 +68,7 @@ namespace PapasDataRia
                 if (selectedRow.Cells[14].Value != DBNull.Value) cbTopping4.Text = Convert.ToString(selectedRow.Cells[14].Value);
                 if (selectedRow.Cells[15].Value != DBNull.Value) nudAmmount4.Value = Convert.ToByte(selectedRow.Cells[15].Value);
                 if (selectedRow.Cells[16].Value != DBNull.Value) cbLocation4.Text = Convert.ToString(selectedRow.Cells[16].Value);
-
             }
-
         }
 
         private void SavePizzaRecipeButton_Click(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace PapasDataRia
             InitializeComponent();
         }
 
-        private void PizzaButton_Click(object sender, EventArgs e)
+        private void PizzaButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             PizzasList pizzasList = new PizzasList();
@@ -25,7 +25,7 @@ namespace PapasDataRia
             this.Show();
         }
 
-        private void SushiButton_Click(object sender, EventArgs e)
+        private void SushiButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             SushiList sushiList = new SushiList();
@@ -33,7 +33,7 @@ namespace PapasDataRia
             this.Show();
         }
 
-        private void DonutsButton_Click(object sender, EventArgs e)
+        private void DonutsButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             DonutsList donutsList = new DonutsList();
@@ -41,7 +41,7 @@ namespace PapasDataRia
             this.Show();
         }
 
-        private void SandwichButton_Click(object sender, EventArgs e)
+        private void SandwichButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             SandwichesList sandwichesList = new SandwichesList();

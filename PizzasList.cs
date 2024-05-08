@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace PapasDataRia
 {
@@ -35,18 +34,18 @@ namespace PapasDataRia
             deleteMenuItem.Click += DeleteMenuItem_Click;
 
             // Привязка контекстного меню к DataGridView
-            dataGridView1.ContextMenuStrip = contextMenuStrip;
+            dgvPizzasList.ContextMenuStrip = contextMenuStrip;
         }
         private void PizzasList_Load(object sender, EventArgs e)
         {
             dataLoader.UpdateView("PizzaRecipiesWithNames", "CreatePizzaRecipiesView.sql");
-            dataLoader.LoadDataFromView("PizzaRecipiesWithNames", dataGridView1);
+            dataLoader.LoadDataFromView("PizzaRecipiesWithNames", dgvPizzasList);
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
             // Получение выбранной строки
-            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+            int selectedRowIndex = dgvPizzasList.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvPizzasList.Rows[selectedRowIndex];
 
             if (!(selectedRow.IsNewRow))
             {
@@ -73,16 +72,12 @@ namespace PapasDataRia
         private void DeleteMenuItem_Click(object sender, EventArgs e)
         {
             // Получение выбранной строки
-            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+            int selectedRowIndex = dgvPizzasList.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvPizzasList.Rows[selectedRowIndex];
 
             // Подтверждение удаления
             if (!(selectedRow.IsNewRow) && MessageBox.Show($"Вы уверены, что хотите удалить запись '{selectedRow.Cells[0].Value}'?", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                // Удаление записи из базы данных
-                // DeleteRecordFromDatabase(selectedRow);
-                //      // оно должно быть функцией?
-
                 string queryString = String.Concat("DELETE FROM PizzaRecipies WHERE id = '", selectedRow.Cells[0].Value, "'");
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -93,15 +88,13 @@ namespace PapasDataRia
                         Convert.ToString(command.ExecuteNonQuery());
                         MessageBox.Show("Строка удалена.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // Удаление строки из DataGridView
-                        dataGridView1.Rows.RemoveAt(selectedRowIndex);
+                        dgvPizzasList.Rows.RemoveAt(selectedRowIndex);
                     }
                     catch (SqlException ex)
                     {
                         MessageBox.Show(ex.Message, "Ошибка SQL!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-
-                
             }
         }
 
