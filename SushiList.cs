@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,17 +15,74 @@ namespace PapasDataRia
     {
         private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Coding\test\PapasDataRia\PapasDatabase.mdf;Integrated Security=True";
         private readonly DataLoader dataLoader;
+
+        private readonly ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
+        private readonly ToolStripMenuItem editMenuItem = new ToolStripMenuItem("Редактировать");
+        private readonly ToolStripMenuItem deleteMenuItem = new ToolStripMenuItem("Удалить");
         public SushiList()
         {
             InitializeComponent();
             dataLoader = new DataLoader(connectionString);
             this.Load += SushiList_Load;
+
+            contextMenuStrip.Items.AddRange(new[] { editMenuItem, deleteMenuItem });
+
+            editMenuItem.Click += EditMenuItem_Click;
+            deleteMenuItem.Click += DeleteMenuItem_Click;
+
+            dgvSushiList.ContextMenuStrip = contextMenuStrip;
         }
 
         private void SushiList_Load(object sender, EventArgs e)
         {
             dataLoader.UpdateView("SushiRecipiesWithNames", "CreateSushiRecipiesView.sql");
-            dataLoader.LoadDataFromView("SushiRecipiesWithNames", dataGridView1);
+            dataLoader.LoadDataFromView("SushiRecipiesWithNames", dgvSushiList);
+        }
+
+        private void EditMenuItem_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndex = dgvSushiList.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvSushiList.Rows[selectedRowIndex];
+
+            if (!(selectedRow.IsNewRow))
+            {
+                SushiForm sushiForm = new SushiForm(selectedRow);
+
+                sushiForm.ShowDialog();
+                SushiList_Load(null, null);
+            }
+        }
+        private void DeleteMenuItem_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndex = dgvSushiList.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvSushiList.Rows[selectedRowIndex];
+
+            if (!(selectedRow.IsNewRow) && MessageBox.Show($"Вы уверены, что хотите удалить запись '{selectedRow.Cells[0].Value}'?", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string queryString = String.Concat("DELETE FROM SushiRecipies WHERE id = '", selectedRow.Cells[0].Value, "'");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    try
+                    {
+                        Convert.ToString(command.ExecuteNonQuery());
+                        dgvSushiList.Rows.RemoveAt(selectedRowIndex);
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ошибка SQL!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+        private void AddSushiButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SushiForm addSushiForm = new SushiForm();
+            addSushiForm.ShowDialog();
+            SushiList_Load(null, null);
+            this.Show();
         }
     }
 }

@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Coding\\test\\PapasDataRia\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|c:\\coding\\test\\papasdataria\\pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -30,70 +9,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeDocumentMoniker": "PizzaForm.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T21:36:33.342Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PizzasList.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
-              "RelativeDocumentMoniker": "PizzasList.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
-              "RelativeToolTip": "PizzasList.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwEIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:06:47.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
-              "RelativeDocumentMoniker": "PizzasList.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:06:44.97Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PizzaForm.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeDocumentMoniker": "PizzaForm.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeToolTip": "PizzaForm.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAwwIsAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T21:55:34.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataLoader.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
-              "RelativeDocumentMoniker": "DataLoader.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
-              "RelativeToolTip": "DataLoader.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC8AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T08:36:52.939Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         }
