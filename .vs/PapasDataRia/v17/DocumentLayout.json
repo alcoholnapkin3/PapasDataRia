@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Coding\\test\\PapasDataRia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|c:\\coding\\test\\papasdataria\\donutslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:donutslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateRegularCustomersView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateRegularCustomersView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|c:\\coding\\test\\papasdataria\\pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:pizzaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateSandwichRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateSandwichRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateSushiRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateSushiRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreatePizzaRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreatePizzaRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\pizzaslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +33,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\donutslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:donutslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\sandwicheslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:sandwicheslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|C:\\Coding\\test\\PapasDataRia\\sandwicheslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{85DFD8E4-E3B2-4FB5-AE58-D3C4AD0DA3D6}|PapasDataRia.csproj|solutionrelative:sandwicheslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreatePizzaRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreatePizzaRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateSushiRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateSushiRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateRegularCustomersView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateRegularCustomersView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|C:\\Coding\\test\\PapasDataRia\\CreateSandwichRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{9490D7A0-0068-43D2-AD1F-C2BB8BB38490}|solutionrelative:CreateSandwichRecipiesView.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +70,142 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeDocumentMoniker": "PizzaForm.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "PizzaForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T21:36:33.342Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PizzasList.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
-              "RelativeDocumentMoniker": "PizzasList.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
-              "RelativeToolTip": "PizzasList.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwEIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:06:47.093Z",
+              "DocumentIndex": 5,
+              "Title": "CreatePizzaRecipiesView.sql ",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\CreatePizzaRecipiesView.sql",
+              "RelativeDocumentMoniker": "CreatePizzaRecipiesView.sql",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\CreatePizzaRecipiesView.sql",
+              "RelativeToolTip": "CreatePizzaRecipiesView.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-08T14:37:51.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateSushiRecipiesView.sql ",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\CreateSushiRecipiesView.sql",
+              "RelativeDocumentMoniker": "CreateSushiRecipiesView.sql",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\CreateSushiRecipiesView.sql",
+              "RelativeToolTip": "CreateSushiRecipiesView.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-08T14:37:49.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateSandwichRecipiesView.sql ",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\CreateSandwichRecipiesView.sql",
+              "RelativeDocumentMoniker": "CreateSandwichRecipiesView.sql",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\CreateSandwichRecipiesView.sql",
+              "RelativeToolTip": "CreateSandwichRecipiesView.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-08T14:37:46.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateRegularCustomersView.sql ",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\CreateRegularCustomersView.sql",
+              "RelativeDocumentMoniker": "CreateRegularCustomersView.sql",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\CreateRegularCustomersView.sql",
+              "RelativeToolTip": "CreateRegularCustomersView.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-08T14:37:33.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataLoader.cs",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
+              "RelativeDocumentMoniker": "DataLoader.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
+              "RelativeToolTip": "DataLoader.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAEwEYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T14:21:51.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DonutsList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\DonutsList.cs",
+              "RelativeDocumentMoniker": "DonutsList.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\DonutsList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DonutsList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T13:43:41.633Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DonutsList.cs",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\DonutsList.cs",
+              "RelativeDocumentMoniker": "DonutsList.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\DonutsList.cs",
+              "RelativeToolTip": "DonutsList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T13:19:50.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
               "RelativeDocumentMoniker": "PizzasList.cs",
               "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "PizzasList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T12:06:44.97Z",
+              "WhenOpened": "2024-05-08T12:37:05.02Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PizzaForm.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeDocumentMoniker": "PizzaForm.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzaForm.cs",
-              "RelativeToolTip": "PizzaForm.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAwwIsAAAARAAAA",
+              "DocumentIndex": 6,
+              "Title": "PizzasList.cs",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
+              "RelativeDocumentMoniker": "PizzasList.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\PizzasList.cs",
+              "RelativeToolTip": "PizzasList.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwC0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T21:55:34.759Z",
+              "WhenOpened": "2024-05-08T12:37:08.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataLoader.cs",
-              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
-              "RelativeDocumentMoniker": "DataLoader.cs",
-              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\DataLoader.cs",
-              "RelativeToolTip": "DataLoader.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC8AAAAQAAAA",
+              "DocumentIndex": 10,
+              "Title": "SandwichesList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\SandwichesList.cs",
+              "RelativeDocumentMoniker": "SandwichesList.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\SandwichesList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SandwichesList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T08:36:52.939Z",
+              "WhenOpened": "2024-05-08T13:58:33.295Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SandwichesList.cs",
+              "DocumentMoniker": "C:\\Coding\\test\\PapasDataRia\\SandwichesList.cs",
+              "RelativeDocumentMoniker": "SandwichesList.cs",
+              "ToolTip": "C:\\Coding\\test\\PapasDataRia\\SandwichesList.cs",
+              "RelativeToolTip": "SandwichesList.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T11:44:11.107Z",
               "EditorCaption": ""
             }
           ]

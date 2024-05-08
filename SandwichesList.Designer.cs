@@ -28,58 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.sandwichRecipiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.papasDatabaseDataSet = new PapasDataRia.PapasDatabaseDataSet();
-            this.sandwichRecipiesTableAdapter = new PapasDataRia.PapasDatabaseDataSetTableAdapters.SandwichRecipiesTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.sandwichRecipiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.papasDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvSandwichesList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.AddSandwichButton = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSandwichesList)).BeginInit();
             this.SuspendLayout();
             // 
-            // sandwichRecipiesBindingSource
+            // dgvSandwichesList
             // 
-            this.sandwichRecipiesBindingSource.DataMember = "SandwichRecipies";
-            this.sandwichRecipiesBindingSource.DataSource = this.papasDatabaseDataSet;
+            this.dgvSandwichesList.AllowUserToAddRows = false;
+            this.dgvSandwichesList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvSandwichesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSandwichesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSandwichesList.ColumnHeadersHeight = 4;
+            this.dgvSandwichesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSandwichesList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSandwichesList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvSandwichesList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSandwichesList.Location = new System.Drawing.Point(0, 0);
+            this.dgvSandwichesList.Name = "dgvSandwichesList";
+            this.dgvSandwichesList.ReadOnly = true;
+            this.dgvSandwichesList.RowHeadersVisible = false;
+            this.dgvSandwichesList.Size = new System.Drawing.Size(1124, 376);
+            this.dgvSandwichesList.TabIndex = 0;
+            this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvSandwichesList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSandwichesList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvSandwichesList.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvSandwichesList.ThemeStyle.ReadOnly = true;
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvSandwichesList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // papasDatabaseDataSet
+            // AddSandwichButton
             // 
-            this.papasDatabaseDataSet.DataSetName = "PapasDatabaseDataSet";
-            this.papasDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sandwichRecipiesTableAdapter
-            // 
-            this.sandwichRecipiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(925, 353);
-            this.dataGridView1.TabIndex = 0;
+            this.AddSandwichButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddSandwichButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddSandwichButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddSandwichButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddSandwichButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddSandwichButton.ForeColor = System.Drawing.Color.White;
+            this.AddSandwichButton.Location = new System.Drawing.Point(775, 393);
+            this.AddSandwichButton.Name = "AddSandwichButton";
+            this.AddSandwichButton.Size = new System.Drawing.Size(180, 45);
+            this.AddSandwichButton.TabIndex = 2;
+            this.AddSandwichButton.Text = "Добавить рецепт сэндвича";
+            this.AddSandwichButton.Click += new System.EventHandler(this.AddSandwichButton_Click);
             // 
             // SandwichesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 458);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1124, 454);
+            this.Controls.Add(this.AddSandwichButton);
+            this.Controls.Add(this.dgvSandwichesList);
             this.Name = "SandwichesList";
             this.Text = "SandwichesList";
             this.Load += new System.EventHandler(this.SandwichesList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sandwichRecipiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.papasDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSandwichesList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private PapasDatabaseDataSet papasDatabaseDataSet;
-        private System.Windows.Forms.BindingSource sandwichRecipiesBindingSource;
-        private PapasDatabaseDataSetTableAdapters.SandwichRecipiesTableAdapter sandwichRecipiesTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private Guna.UI2.WinForms.Guna2DataGridView dgvSandwichesList;
+        private Guna.UI2.WinForms.Guna2Button AddSandwichButton;
     }
 }

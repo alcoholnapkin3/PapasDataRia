@@ -28,52 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PizzaButton = new System.Windows.Forms.Button();
-            this.SushiButton = new System.Windows.Forms.Button();
-            this.DonutsButton = new System.Windows.Forms.Button();
-            this.SandwichButton = new System.Windows.Forms.Button();
+            this.PizzaButton = new Guna.UI2.WinForms.Guna2Button();
             this.tableAdapterManager1 = new PapasDataRia.PapasDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.SushiButton = new Guna.UI2.WinForms.Guna2Button();
+            this.DonutsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.SandwichButton = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // PizzaButton
             // 
-            this.PizzaButton.Location = new System.Drawing.Point(12, 12);
+            this.PizzaButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PizzaButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PizzaButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PizzaButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PizzaButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PizzaButton.ForeColor = System.Drawing.Color.White;
+            this.PizzaButton.Location = new System.Drawing.Point(12, 19);
             this.PizzaButton.Name = "PizzaButton";
-            this.PizzaButton.Size = new System.Drawing.Size(168, 50);
-            this.PizzaButton.TabIndex = 0;
+            this.PizzaButton.Size = new System.Drawing.Size(223, 43);
+            this.PizzaButton.TabIndex = 5;
             this.PizzaButton.Text = "Пицца";
-            this.PizzaButton.UseVisualStyleBackColor = true;
-            this.PizzaButton.Click += new System.EventHandler(this.PizzaButton_Click);
-            // 
-            // SushiButton
-            // 
-            this.SushiButton.Location = new System.Drawing.Point(202, 12);
-            this.SushiButton.Name = "SushiButton";
-            this.SushiButton.Size = new System.Drawing.Size(168, 50);
-            this.SushiButton.TabIndex = 1;
-            this.SushiButton.Text = "Суши";
-            this.SushiButton.UseVisualStyleBackColor = true;
-            this.SushiButton.Click += new System.EventHandler(this.SushiButton_Click);
-            // 
-            // DonutsButton
-            // 
-            this.DonutsButton.Location = new System.Drawing.Point(12, 81);
-            this.DonutsButton.Name = "DonutsButton";
-            this.DonutsButton.Size = new System.Drawing.Size(168, 50);
-            this.DonutsButton.TabIndex = 3;
-            this.DonutsButton.Text = "Пончики";
-            this.DonutsButton.UseVisualStyleBackColor = true;
-            this.DonutsButton.Click += new System.EventHandler(this.DonutsButton_Click);
-            // 
-            // SandwichButton
-            // 
-            this.SandwichButton.Location = new System.Drawing.Point(202, 81);
-            this.SandwichButton.Name = "SandwichButton";
-            this.SandwichButton.Size = new System.Drawing.Size(168, 50);
-            this.SandwichButton.TabIndex = 4;
-            this.SandwichButton.Text = "Сэндвич";
-            this.SandwichButton.UseVisualStyleBackColor = true;
-            this.SandwichButton.Click += new System.EventHandler(this.SandwichButton_Click);
+            this.PizzaButton.Click += new System.EventHandler(this.PizzaButton_Click_1);
             // 
             // tableAdapterManager1
             // 
@@ -112,11 +87,56 @@
             this.tableAdapterManager1.TeaFlavorsTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = PapasDataRia.PapasDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // SushiButton
+            // 
+            this.SushiButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SushiButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SushiButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SushiButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SushiButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SushiButton.ForeColor = System.Drawing.Color.White;
+            this.SushiButton.Location = new System.Drawing.Point(258, 19);
+            this.SushiButton.Name = "SushiButton";
+            this.SushiButton.Size = new System.Drawing.Size(223, 43);
+            this.SushiButton.TabIndex = 6;
+            this.SushiButton.Text = "Суши";
+            this.SushiButton.Click += new System.EventHandler(this.SushiButton_Click_1);
+            // 
+            // DonutsButton
+            // 
+            this.DonutsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DonutsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DonutsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DonutsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DonutsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DonutsButton.ForeColor = System.Drawing.Color.White;
+            this.DonutsButton.Location = new System.Drawing.Point(12, 88);
+            this.DonutsButton.Name = "DonutsButton";
+            this.DonutsButton.Size = new System.Drawing.Size(223, 43);
+            this.DonutsButton.TabIndex = 7;
+            this.DonutsButton.Text = "Пончики";
+            this.DonutsButton.Click += new System.EventHandler(this.DonutsButton_Click_1);
+            // 
+            // SandwichButton
+            // 
+            this.SandwichButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SandwichButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SandwichButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SandwichButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SandwichButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SandwichButton.ForeColor = System.Drawing.Color.White;
+            this.SandwichButton.Location = new System.Drawing.Point(258, 88);
+            this.SandwichButton.Name = "SandwichButton";
+            this.SandwichButton.Size = new System.Drawing.Size(223, 43);
+            this.SandwichButton.TabIndex = 8;
+            this.SandwichButton.Text = "Сэндвич";
+            this.SandwichButton.Click += new System.EventHandler(this.SandwichButton_Click_1);
+            // 
             // RecipesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 162);
+            this.ClientSize = new System.Drawing.Size(495, 155);
             this.Controls.Add(this.SandwichButton);
             this.Controls.Add(this.DonutsButton);
             this.Controls.Add(this.SushiButton);
@@ -128,11 +148,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button PizzaButton;
-        private System.Windows.Forms.Button SushiButton;
-        private System.Windows.Forms.Button DonutsButton;
-        private System.Windows.Forms.Button SandwichButton;
         private PapasDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private Guna.UI2.WinForms.Guna2Button PizzaButton;
+        private Guna.UI2.WinForms.Guna2Button SushiButton;
+        private Guna.UI2.WinForms.Guna2Button DonutsButton;
+        private Guna.UI2.WinForms.Guna2Button SandwichButton;
     }
 }

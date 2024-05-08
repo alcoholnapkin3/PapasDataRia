@@ -11,15 +11,15 @@ SELECT
     df1.name AS Filling1,
     df2.name AS Filling2,
     df3.name AS Filling3,
-    dip1.name AS IcingOrPowder1,
-    dip2.name AS IcingOrPowder2,
-    dip3.name AS IcingOrPowder3,
-    dsd1.name AS SprinkleOrDrizzle1,
-    dsd2.name AS SprinkleOrDrizzle2,
-    dsd3.name AS SprinkleOrDrizzle3,
-    dsd4.name AS ExtraSprinkleOrDrizzle1,
-    dsd5.name AS ExtraSprinkleOrDrizzle2,
-    dsd6.name AS ExtraSprinkleOrDrizzle3
+    dip1.name AS Icing1,
+    dip2.name AS Icing2,
+    dip3.name AS Icing3,
+    dsd1.name AS Sprinkle1,
+    dsd2.name AS Sprinkle2,
+    dsd3.name AS Sprinkle3,
+    dsd4.name AS Extra1,
+    dsd5.name AS Extra2,
+    dsd6.name AS Extra3
 FROM
     DonutsRecipies dr
     LEFT JOIN DonutDoughs dd1 ON dr.dough_1st = dd1.id

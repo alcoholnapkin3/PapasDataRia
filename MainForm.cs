@@ -23,8 +23,7 @@ namespace PapasDataRia
         {
        
         }
-
-        private void CustomersButton_Click(object sender, EventArgs e)
+        private void CustomersButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             CustomersForm customers = new CustomersForm();
@@ -32,7 +31,7 @@ namespace PapasDataRia
             this.Show();
         }
 
-        private void RecipesButton_Click(object sender, EventArgs e)
+        private void RecipiesButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             RecipesForm recipes = new RecipesForm();
