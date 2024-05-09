@@ -142,7 +142,8 @@
             this.Controls.Add(this.SushiButton);
             this.Controls.Add(this.PizzaButton);
             this.Name = "RecipesForm";
-            this.Text = "Recipes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Рецепты";
             this.ResumeLayout(false);
 
         }

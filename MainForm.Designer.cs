@@ -77,6 +77,7 @@
             this.Controls.Add(this.RecipiesButton);
             this.Controls.Add(this.CustomersButton);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 

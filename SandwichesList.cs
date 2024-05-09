@@ -41,6 +41,20 @@ namespace PapasDataRia
 
             dgvSandwichesList.AutoResizeColumnHeadersHeight();
             dgvSandwichesList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
+
+            dgvSandwichesList.Columns["id"].HeaderText = "ID";
+            dgvSandwichesList.Columns["recipe_name"].HeaderText = "Название";
+            dgvSandwichesList.Columns["meat_or_alternative_name"].HeaderText = "Первое мясо/альтернатива";
+            dgvSandwichesList.Columns["batter_or_breading_name"].HeaderText = "Первое тесто/панировка";
+            dgvSandwichesList.Columns["extra_meat_or_alternative_name"].HeaderText = "Второе мясо/альтернатива";
+            dgvSandwichesList.Columns["extra_batter_or_breading_name"].HeaderText = "Второе тесто/панировка";
+            dgvSandwichesList.Columns["bun_name"].HeaderText = "Булка";
+            dgvSandwichesList.Columns["topping_or_sauce_1st_name"].HeaderText = "Первый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_2nd_name"].HeaderText = "Второй ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_3rd_name"].HeaderText = "Третий ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_4th_name"].HeaderText = "Четвёртый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_5th_name"].HeaderText = "Пятый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_6th_name"].HeaderText = "Шестой ингредиент";
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {

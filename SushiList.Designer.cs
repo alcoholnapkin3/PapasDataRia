@@ -63,7 +63,7 @@
             this.dgvSushiList.Name = "dgvSushiList";
             this.dgvSushiList.ReadOnly = true;
             this.dgvSushiList.RowHeadersVisible = false;
-            this.dgvSushiList.Size = new System.Drawing.Size(1168, 390);
+            this.dgvSushiList.Size = new System.Drawing.Size(1168, 422);
             this.dgvSushiList.TabIndex = 0;
             this.dgvSushiList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSushiList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,7 +95,7 @@
             this.AddSushiButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AddSushiButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddSushiButton.ForeColor = System.Drawing.Color.White;
-            this.AddSushiButton.Location = new System.Drawing.Point(833, 416);
+            this.AddSushiButton.Location = new System.Drawing.Point(835, 429);
             this.AddSushiButton.Name = "AddSushiButton";
             this.AddSushiButton.Size = new System.Drawing.Size(180, 45);
             this.AddSushiButton.TabIndex = 2;
@@ -110,7 +110,8 @@
             this.Controls.Add(this.AddSushiButton);
             this.Controls.Add(this.dgvSushiList);
             this.Name = "SushiList";
-            this.Text = "SushiList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Рецепты суши";
             this.Load += new System.EventHandler(this.SushiList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSushiList)).EndInit();
             this.ResumeLayout(false);
