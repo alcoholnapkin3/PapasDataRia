@@ -20,6 +20,7 @@ namespace PapasDataRia
         private readonly ToolStripMenuItem editMenuItem = new ToolStripMenuItem("Редактировать");
         private readonly ToolStripMenuItem deleteMenuItem = new ToolStripMenuItem("Удалить");
 
+        private DataTable dataSource;
         public SandwichesList()
         {
             InitializeComponent();
@@ -39,22 +40,38 @@ namespace PapasDataRia
             dataLoader.UpdateView("SandwichRecipiesWithNames", "CreateSandwichRecipiesView.sql");
             dataLoader.LoadDataFromView("SandwichRecipiesWithNames", dgvSandwichesList);
 
+            dataSource = GetDataTableFromDataGridView(dgvSandwichesList);
             dgvSandwichesList.AutoResizeColumnHeadersHeight();
             dgvSandwichesList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
 
             dgvSandwichesList.Columns["id"].HeaderText = "ID";
+            dgvSandwichesList.Columns["id"].Width = 50;
             dgvSandwichesList.Columns["recipe_name"].HeaderText = "Название";
-            dgvSandwichesList.Columns["meat_or_alternative_name"].HeaderText = "Первое мясо/альтернатива";
-            dgvSandwichesList.Columns["batter_or_breading_name"].HeaderText = "Первое тесто/панировка";
-            dgvSandwichesList.Columns["extra_meat_or_alternative_name"].HeaderText = "Второе мясо/альтернатива";
-            dgvSandwichesList.Columns["extra_batter_or_breading_name"].HeaderText = "Второе тесто/панировка";
+            dgvSandwichesList.Columns["recipe_name"].Width = 100;
+            dgvSandwichesList.Columns["meat_or_alternative_name"].HeaderText = "Мясо котлеты";
+            dgvSandwichesList.Columns["meat_or_alternative_name"].Width = 100;
+            dgvSandwichesList.Columns["batter_or_breading_name"].HeaderText = "Тесто котлеты";
+            dgvSandwichesList.Columns["batter_or_breading_name"].Width = 100;
+            dgvSandwichesList.Columns["extra_meat_or_alternative_name"].HeaderText = "Мясо второй котлеты"; // или панирока
+            dgvSandwichesList.Columns["extra_meat_or_alternative_name"].Width = 100;
+            dgvSandwichesList.Columns["extra_batter_or_breading_name"].HeaderText = "Тесто второй котлеты";
+            dgvSandwichesList.Columns["extra_batter_or_breading_name"].Width = 100;
             dgvSandwichesList.Columns["bun_name"].HeaderText = "Булка";
-            dgvSandwichesList.Columns["topping_or_sauce_1st_name"].HeaderText = "Первый ингредиент";
-            dgvSandwichesList.Columns["topping_or_sauce_2nd_name"].HeaderText = "Второй ингредиент";
-            dgvSandwichesList.Columns["topping_or_sauce_3rd_name"].HeaderText = "Третий ингредиент";
-            dgvSandwichesList.Columns["topping_or_sauce_4th_name"].HeaderText = "Четвёртый ингредиент";
-            dgvSandwichesList.Columns["topping_or_sauce_5th_name"].HeaderText = "Пятый ингредиент";
-            dgvSandwichesList.Columns["topping_or_sauce_6th_name"].HeaderText = "Шестой ингредиент";
+            dgvSandwichesList.Columns["bun_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_1st_name"].HeaderText = "1-ый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_1st_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_2nd_name"].HeaderText = "2-ой ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_2nd_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_3rd_name"].HeaderText = "3-ий ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_3rd_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_4th_name"].HeaderText = "4-ый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_4th_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_5th_name"].HeaderText = "5-ый ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_5th_name"].Width = 100;
+            dgvSandwichesList.Columns["topping_or_sauce_6th_name"].HeaderText = "6-ой ингредиент";
+            dgvSandwichesList.Columns["topping_or_sauce_6th_name"].Width = 100;
+
+            rbID.Checked = true;
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
@@ -103,5 +120,106 @@ namespace PapasDataRia
             SandwichesList_Load(null, null);
             this.Show();
         }
+
+        private DataTable GetDataTableFromDataGridView(DataGridView dgv)
+        {
+            if (dgv.DataSource is DataTable dt)
+            {
+                return dt.Copy();
+            }
+            else if (dgv.DataSource is DataView dv)
+            {
+                return dv.ToTable();
+            }
+            else
+            {
+                throw new InvalidOperationException("Неподдерживаемый тип источника данных для DataGridView.");
+            }
+        }
+
+        private bool IllegalCharactersCheck(string text)
+        {
+            string legal = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            foreach (char character in text)
+            {
+                if (!legal.Contains(character))
+                    return false;
+            }
+
+            return true;
+        }
+
+
+        private void tbSearchSandwich_TextChanged(object sender, EventArgs e)
+        {
+            DataTable filteredTable = GetDataTableFromDataGridView(dgvSandwichesList);
+            string searchText = tbSearchSandwich.Text.ToLower();
+
+            if (IllegalCharactersCheck(searchText))
+            {
+
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    dgvSandwichesList.DataSource = filteredTable;
+                    dataSource = filteredTable;
+                }
+                else
+                {
+                    string filter = string.Join(" OR ", columnsToFilter.Select(col => $"{col} LIKE '%{searchText}%'"));
+                    filteredTable.DefaultView.RowFilter = filter;
+                    dgvSandwichesList.DataSource = filteredTable.DefaultView;
+                    dataSource = filteredTable;
+                }
+            }
+            dgvSandwichesList.DataSource = dataSource;
+        }
+
+        private string[] allColumns = { "id", "recipe_name", "meat_or_alternative_name", "batter_or_breading_name", "extra_meat_or_alternative_name", "extra_batter_or_breading_name", "bun_name", "topping_or_sauce_1st_name", "topping_or_sauce_2nd_name", "topping_or_sauce_3rd_name", "topping_or_sauce_4th_name", "topping_or_sauce_5th_name", "topping_or_sauce_6th_name" };
+        private string[] columnsToFilter;
+        private void UpdateColumnsToFilter()
+        {
+            if (rbAll.Checked)
+            {
+                columnsToFilter = allColumns;
+            }
+            else if (rbID.Checked)
+            {
+                columnsToFilter = new string[] { "id" };
+            }
+            else if (rbName.Checked)
+            {
+                columnsToFilter = new string[] { "recipe_name" };
+            }
+            else if (rbFillings.Checked)
+            {
+                columnsToFilter = new string[] { "topping_or_sauce_1st_name", "topping_or_sauce_2nd_name", "topping_or_sauce_3rd_name", "topping_or_sauce_4th_name", "topping_or_sauce_5th_name", "topping_or_sauce_6th_name" };
+            }
+        }
+
+        private void rbName_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchSandwich_TextChanged(null, null);
+        }
+
+        private void rbFillings_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchSandwich_TextChanged(null, null);
+        }
+
+        private void rbID_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchSandwich_TextChanged(null, null);
+        }
+
+        private void rbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchSandwich_TextChanged(null, null);
+        }
+
     }
 }

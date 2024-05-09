@@ -151,7 +151,6 @@
     <Compile Include="CustomersList.Designer.cs">
       <DependentUpon>CustomersList.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridViewFilter.cs" />
     <Compile Include="DataLoader.cs" />
     <Compile Include="DonutForm.cs">
       <SubType>Form</SubType>

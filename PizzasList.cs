@@ -47,29 +47,53 @@ namespace PapasDataRia
             dataSource = GetDataTableFromDataGridView(dgvPizzasList);
 
             dgvPizzasList.AutoResizeColumnHeadersHeight();
-            dgvPizzasList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
+            dgvPizzasList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader); // - Лучше быть не может (в плохом смысле)
+
 
             dgvPizzasList.Columns["id"].HeaderText = "ID";
+            dgvPizzasList.Columns["id"].Width = 50;
+            //dgvPizzasList.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPizzasList.Columns["name"].HeaderText = "Название";
+            dgvPizzasList.Columns["name"].Width = 100;
             dgvPizzasList.Columns["crust"].HeaderText = "Бортики";
+            dgvPizzasList.Columns["crust"].Width = 100;
             dgvPizzasList.Columns["sauce"].HeaderText = "Соус";
+            dgvPizzasList.Columns["sauce"].Width = 100;
             dgvPizzasList.Columns["cheese"].HeaderText = "Сыр";
+            dgvPizzasList.Columns["cheese"].Width = 100;
+            //dgvPizzasList.Columns["cheese"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
 
             dgvPizzasList.Columns["topping_1st"].HeaderText = "Первая начинка";
-            dgvPizzasList.Columns["ammount_1st"].HeaderText = "Количество первой начинки";
-            dgvPizzasList.Columns["location_1st"].HeaderText = "Положение первой начинки";
+            dgvPizzasList.Columns["topping_1st"].Width = 100;
+            dgvPizzasList.Columns["ammount_1st"].HeaderText = "Кол-во 1-ой начинки";
+            dgvPizzasList.Columns["ammount_1st"].Width = 50;
+            dgvPizzasList.Columns["location_1st"].HeaderText = "Место 1-ой начинки";
+            dgvPizzasList.Columns["location_1st"].Width = 100;
+
 
             dgvPizzasList.Columns["topping_2nd"].HeaderText = "Вторая начинка";
-            dgvPizzasList.Columns["ammount_2nd"].HeaderText = "Количество второй начинки";
-            dgvPizzasList.Columns["location_2nd"].HeaderText = "Положение второй начинки";
+            dgvPizzasList.Columns["topping_2nd"].Width = 100;
+            dgvPizzasList.Columns["ammount_2nd"].HeaderText = "Кол-во 2-ой начинки";
+            dgvPizzasList.Columns["ammount_2nd"].Width = 50;
+            dgvPizzasList.Columns["location_2nd"].HeaderText = "Место 2-ой начинки";
+            dgvPizzasList.Columns["location_2nd"].Width = 100;
 
             dgvPizzasList.Columns["topping_3rd"].HeaderText = "Третья начинка";
-            dgvPizzasList.Columns["ammount_3rd"].HeaderText = "Количество третьей начинки";
-            dgvPizzasList.Columns["location_3rd"].HeaderText = "Положение третьей начинки";
+            dgvPizzasList.Columns["topping_3rd"].Width = 100;
+            dgvPizzasList.Columns["ammount_3rd"].HeaderText = "Кол-во 3-ей начинки";
+            dgvPizzasList.Columns["ammount_3rd"].Width = 50;
+            dgvPizzasList.Columns["location_3rd"].HeaderText = "Место 3-ей начинки";
+            dgvPizzasList.Columns["location_3rd"].Width = 100;
 
             dgvPizzasList.Columns["topping_4th"].HeaderText = "Четвёртая начинка";
-            dgvPizzasList.Columns["ammount_4th"].HeaderText = "Количество четвёртой начинки";
-            dgvPizzasList.Columns["location_4th"].HeaderText = "Положение четвёртой начинки";
+            dgvPizzasList.Columns["topping_4th"].Width = 100;
+            dgvPizzasList.Columns["ammount_4th"].HeaderText = "Кол-во 4-ой начинки";
+            dgvPizzasList.Columns["ammount_4th"].Width = 50;
+            dgvPizzasList.Columns["location_4th"].HeaderText = "Место 4-ой начинки";
+            dgvPizzasList.Columns["location_4th"].Width = 100;
+
+            rbID.Checked = true;
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
@@ -153,25 +177,45 @@ namespace PapasDataRia
             }
         }
 
+        private bool IllegalCharactersCheck(string text)
+        {
+            string legal = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            foreach (char character in text)
+            {
+                //MessageBox.Show(Convert.ToString(character));
+
+                if (!legal.Contains(character))
+                    return false;
+            }
+
+            return true;
+        }
+
         private void tbSearchPizza_TextChanged(object sender, EventArgs e)
         {
+            
             DataTable filteredTable = GetDataTableFromDataGridView(dgvPizzasList);
             string searchText = tbSearchPizza.Text.ToLower();
 
-            if (string.IsNullOrEmpty(searchText))
+            if (IllegalCharactersCheck(searchText))
             {
-                dgvPizzasList.DataSource = filteredTable;
-                dataSource = filteredTable;
-            }
-            else
-            {
-                string filter = string.Join(" OR ", columnsToFilter.Select(col => $"{col} LIKE '%{searchText}%'"));
-                filteredTable.DefaultView.RowFilter = filter;
-                dgvPizzasList.DataSource = filteredTable.DefaultView;
-                dataSource = filteredTable;
+
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    dgvPizzasList.DataSource = filteredTable;
+                    dataSource = filteredTable;
+                }
+                else
+                {
+                    string filter = string.Join(" OR ", columnsToFilter.Select(col => $"{col} LIKE '%{searchText}%'"));
+                   filteredTable.DefaultView.RowFilter = filter;
+                    dgvPizzasList.DataSource = filteredTable.DefaultView;
+                    dataSource = filteredTable;
+                }
             }
             dgvPizzasList.DataSource = dataSource;
-        }
+        } 
         private string[] allColumns = { "id", "name", "crust", "sauce", "cheese", "topping_1st", "location_1st", "topping_2nd", "location_2nd", "topping_3rd", "location_3rd", "topping_4th", "location_4th" };
         private string[] columnsToFilter;
         private void UpdateColumnsToFilter()
@@ -206,6 +250,12 @@ namespace PapasDataRia
         }
 
         private void rbID_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchPizza_TextChanged(null, null);
+        }
+
+        private void rbAll_CheckedChanged(object sender, EventArgs e)
         {
             UpdateColumnsToFilter();
             tbSearchPizza_TextChanged(null, null);

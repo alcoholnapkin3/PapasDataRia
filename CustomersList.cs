@@ -20,6 +20,7 @@ namespace PapasDataRia
         private readonly ToolStripMenuItem editMenuItem = new ToolStripMenuItem("Редактировать");
         private readonly ToolStripMenuItem deleteMenuItem = new ToolStripMenuItem("Удалить");
 
+        private DataTable dataSource;
         public CustomersForm()
         {
             InitializeComponent();
@@ -39,18 +40,37 @@ namespace PapasDataRia
             dataLoader.UpdateView("RegularCustomersWithNames", "CreateRegularCustomersView.sql");
             dataLoader.LoadDataFromView("RegularCustomersWithNames", dgvCustomersList);
 
+            dataSource = GetDataTableFromDataGridView(dgvCustomersList);
+            dgvCustomersList.AutoResizeColumnHeadersHeight();
+            dgvCustomersList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
+
             dgvCustomersList.Columns["customer_name"].HeaderText = "Имя";
+            dgvCustomersList.Columns["customer_name"].Width = 70;
             dgvCustomersList.Columns["fav_pizza_recipie_name"].HeaderText = "Рецепт пиццы";
+            dgvCustomersList.Columns["fav_pizza_recipie_name"].Width = 100;
             dgvCustomersList.Columns["fav_pizza_bake_name"].HeaderText = "Прожарка пиццы";
+            dgvCustomersList.Columns["fav_pizza_bake_name"].Width = 100;
             dgvCustomersList.Columns["fav_pizza_cut_name"].HeaderText = "Нарезка пиццы";
+            dgvCustomersList.Columns["fav_pizza_cut_name"].Width = 100;
             dgvCustomersList.Columns["fav_sushi_recipie_name"].HeaderText = "Рецепт суши";
+            dgvCustomersList.Columns["fav_sushi_recipie_name"].Width = 100;
             dgvCustomersList.Columns["fav_bubbletea_flavor_name"].HeaderText = "Чайный аромат";
+            dgvCustomersList.Columns["fav_bubbletea_flavor_name"].Width = 100;
             dgvCustomersList.Columns["fav_bubbletea_bubbles_name"].HeaderText = "Чайные пузырьки";
+            dgvCustomersList.Columns["fav_bubbletea_bubbles_name"].Width = 100;
             dgvCustomersList.Columns["fav_donuts_recipie_name"].HeaderText = "Рецепт пончиков";
+            dgvCustomersList.Columns["fav_donuts_recipie_name"].Width = 100;
             dgvCustomersList.Columns["fav_sandwich_recipie_name"].HeaderText = "Рецепт сэндвича";
+            dgvCustomersList.Columns["fav_sandwich_recipie_name"].Width = 100;
             dgvCustomersList.Columns["fav_slush_size_name"].HeaderText = "Размер слаша";
+            dgvCustomersList.Columns["fav_slush_size_name"].Width = 100;
             dgvCustomersList.Columns["fav_slush_bottom_flavor_name"].HeaderText = "Первый вкус слаша";
+            dgvCustomersList.Columns["fav_slush_bottom_flavor_name"].Width = 100;
             dgvCustomersList.Columns["fav_slush_top_flavor_name"].HeaderText = "Второй вкус слаша";
+            dgvCustomersList.Columns["fav_slush_top_flavor_name"].Width = 100;
+
+            rbName.Checked = true;
+            
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
@@ -98,6 +118,89 @@ namespace PapasDataRia
             addCustomerForm.ShowDialog();
             CustomersForm_Load(null, null);
             this.Show();
+        }
+
+        private DataTable GetDataTableFromDataGridView(DataGridView dgv)
+        {
+            if (dgv.DataSource is DataTable dt)
+            {
+                return dt.Copy();
+            }
+            else if (dgv.DataSource is DataView dv)
+            {
+                return dv.ToTable();
+            }
+            else
+            {
+                throw new InvalidOperationException("Неподдерживаемый тип источника данных для DataGridView.");
+            }
+        }
+
+        private bool IllegalCharactersCheck(string text)
+        {
+            string legal = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            foreach (char character in text)
+            {
+                if (!legal.Contains(character))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void tbSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+            DataTable filteredTable = GetDataTableFromDataGridView(dgvCustomersList);
+            string searchText = tbSearchCustomer.Text.ToLower();
+            //MessageBox.Show(searchText);
+
+
+            if (IllegalCharactersCheck(searchText))
+            {
+
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    //MessageBox.Show("huh");
+
+                    dgvCustomersList.DataSource = filteredTable;
+                    dataSource = filteredTable;
+                }
+                else
+                {
+                    string filter = string.Join(" OR ", columnsToFilter.Select(col => $"{col} LIKE '%{searchText}%'"));
+                    filteredTable.DefaultView.RowFilter = filter;
+                    dgvCustomersList.DataSource = filteredTable.DefaultView;
+                    dataSource = filteredTable;
+                }
+            }
+            dgvCustomersList.DataSource = dataSource;
+        }
+
+        private string[] allColumns = { "customer_name", "fav_pizza_recipie_name", "fav_pizza_bake_name", "fav_pizza_cut_name", "fav_sushi_recipie_name", "fav_bubbletea_flavor_name", "fav_bubbletea_bubbles_name", "fav_donuts_recipie_name", "fav_sandwich_recipie_name", "fav_slush_size_name", "fav_slush_bottom_flavor_name", "fav_slush_top_flavor_name" };
+        private string[] columnsToFilter;
+        private void UpdateColumnsToFilter()
+        {
+            if (rbAll.Checked)
+            {
+                columnsToFilter = allColumns;
+            }
+            else if (rbName.Checked)
+            {
+                columnsToFilter = new string[] { "customer_name" };
+            }
+        }
+
+        private void rbName_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchCustomer_TextChanged(null, null);
+        }
+
+        private void rbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchCustomer_TextChanged(null, null);
         }
     }
 }
