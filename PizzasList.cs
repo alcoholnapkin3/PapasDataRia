@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace PapasDataRia
 {
@@ -164,11 +165,50 @@ namespace PapasDataRia
             }
             else
             {
-                filteredTable.DefaultView.RowFilter = $"Name LIKE '%{searchText}%'";
+                string filter = string.Join(" OR ", columnsToFilter.Select(col => $"{col} LIKE '%{searchText}%'"));
+                filteredTable.DefaultView.RowFilter = filter;
                 dgvPizzasList.DataSource = filteredTable.DefaultView;
                 dataSource = filteredTable;
             }
             dgvPizzasList.DataSource = dataSource;
+        }
+        private string[] allColumns = { "id", "name", "crust", "sauce", "cheese", "topping_1st", "location_1st", "topping_2nd", "location_2nd", "topping_3rd", "location_3rd", "topping_4th", "location_4th" };
+        private string[] columnsToFilter;
+        private void UpdateColumnsToFilter()
+        {
+            if (rbAll.Checked)
+            {
+                columnsToFilter = allColumns;
+            }
+            else if (rbID.Checked)
+            {
+                columnsToFilter = new string[] { "id" };
+            }
+            else if (rbName.Checked)
+            {
+                columnsToFilter = new string[] { "name" };
+            }
+            else if (rbToppings.Checked)
+            {
+                columnsToFilter = new string[] { "topping_1st", "topping_2nd", "topping_3rd", "topping_4th" };
+            }
+        }
+        private void rbName_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchPizza_TextChanged(null, null);
+        }
+
+        private void rbToppings_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchPizza_TextChanged(null, null);
+        }
+
+        private void rbID_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateColumnsToFilter();
+            tbSearchPizza_TextChanged(null, null);
         }
     }
 }
