@@ -38,6 +38,19 @@ namespace PapasDataRia
         {
             dataLoader.UpdateView("RegularCustomersWithNames", "CreateRegularCustomersView.sql");
             dataLoader.LoadDataFromView("RegularCustomersWithNames", dgvCustomersList);
+
+            dgvCustomersList.Columns["customer_name"].HeaderText = "Имя";
+            dgvCustomersList.Columns["fav_pizza_recipie_name"].HeaderText = "Рецепт пиццы";
+            dgvCustomersList.Columns["fav_pizza_bake_name"].HeaderText = "Прожарка пиццы";
+            dgvCustomersList.Columns["fav_pizza_cut_name"].HeaderText = "Нарезка пиццы";
+            dgvCustomersList.Columns["fav_sushi_recipie_name"].HeaderText = "Рецепт суши";
+            dgvCustomersList.Columns["fav_bubbletea_flavor_name"].HeaderText = "Чайный аромат";
+            dgvCustomersList.Columns["fav_bubbletea_bubbles_name"].HeaderText = "Чайные пузырьки";
+            dgvCustomersList.Columns["fav_donuts_recipie_name"].HeaderText = "Рецепт пончиков";
+            dgvCustomersList.Columns["fav_sandwich_recipie_name"].HeaderText = "Рецепт сэндвича";
+            dgvCustomersList.Columns["fav_slush_size_name"].HeaderText = "Размер слаша";
+            dgvCustomersList.Columns["fav_slush_bottom_flavor_name"].HeaderText = "Первый вкус слаша";
+            dgvCustomersList.Columns["fav_slush_top_flavor_name"].HeaderText = "Второй вкус слаша";
         }
         private void EditMenuItem_Click(object sender, EventArgs e)
         {

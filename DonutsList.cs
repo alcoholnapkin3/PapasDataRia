@@ -32,8 +32,6 @@ namespace PapasDataRia
             deleteMenuItem.Click += DeleteMenuItem_Click;
 
             dgvDonutsList.ContextMenuStrip = contextMenuStrip;
-
-            
         }
         private void DonutsList_Load(object sender, EventArgs e)
         {
@@ -47,6 +45,27 @@ namespace PapasDataRia
             dgvDonutsList.AutoResizeColumnHeadersHeight();
             dgvDonutsList.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.ColumnHeader);
             //dgvDonutsList.AutoResizeColumns();
+
+            dgvDonutsList.Columns["id"].HeaderText = "ID";
+            dgvDonutsList.Columns["RecipeName"].HeaderText = "Название";
+            dgvDonutsList.Columns["Dough1"].HeaderText = "1-ый пончик: тесто";
+            dgvDonutsList.Columns["Dough2"].HeaderText = "2-ой пончик: тесто";
+            dgvDonutsList.Columns["Dough3"].HeaderText = "3-ий пончик: тесто";
+            dgvDonutsList.Columns["Shape1"].HeaderText = "1-ый пончик: форма";
+            dgvDonutsList.Columns["Shape2"].HeaderText = "2-ой пончик: форма";
+            dgvDonutsList.Columns["Shape3"].HeaderText = "3-ий пончик: форма";
+            dgvDonutsList.Columns["Filling1"].HeaderText = "1-ый пончик: начинка";
+            dgvDonutsList.Columns["Filling2"].HeaderText = "2-ой пончик: начинка";
+            dgvDonutsList.Columns["Filling3"].HeaderText = "3-ий пончик: начинка";
+            dgvDonutsList.Columns["IcingOrPowder1"].HeaderText = "1-ый пончик: глазурь";
+            dgvDonutsList.Columns["IcingOrPowder2"].HeaderText = "2-ой пончик: глазурь";
+            dgvDonutsList.Columns["IcingOrPowder3"].HeaderText = "3-ий пончик: глазурь";
+            dgvDonutsList.Columns["SprinkleOrDrizzle1"].HeaderText = "1-ый пончик: 1-ый топпинг";
+            dgvDonutsList.Columns["SprinkleOrDrizzle2"].HeaderText = "2-ой пончик: 1-ый топпинг";
+            dgvDonutsList.Columns["SprinkleOrDrizzle3"].HeaderText = "3-ий пончик: 1-ый топпинг";
+            dgvDonutsList.Columns["ExtraSprinkleOrDrizzle1"].HeaderText = "1-ый пончик: 2-ой топпинг";
+            dgvDonutsList.Columns["ExtraSprinkleOrDrizzle2"].HeaderText = "2-ой пончик: 2-ой топпинг";
+            dgvDonutsList.Columns["ExtraSprinkleOrDrizzle3"].HeaderText = "3-ий пончик: 2-ой топпинг";
         }
 
         private void EditMenuItem_Click(object sender, EventArgs e)

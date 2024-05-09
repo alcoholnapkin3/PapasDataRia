@@ -66,7 +66,7 @@
             this.dgvSandwichesList.Name = "dgvSandwichesList";
             this.dgvSandwichesList.ReadOnly = true;
             this.dgvSandwichesList.RowHeadersVisible = false;
-            this.dgvSandwichesList.Size = new System.Drawing.Size(1124, 376);
+            this.dgvSandwichesList.Size = new System.Drawing.Size(1197, 376);
             this.dgvSandwichesList.TabIndex = 0;
             this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSandwichesList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -109,11 +109,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 454);
+            this.ClientSize = new System.Drawing.Size(1197, 454);
             this.Controls.Add(this.AddSandwichButton);
             this.Controls.Add(this.dgvSandwichesList);
             this.Name = "SandwichesList";
-            this.Text = "SandwichesList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Рецепты сэндвича";
             this.Load += new System.EventHandler(this.SandwichesList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSandwichesList)).EndInit();
             this.ResumeLayout(false);

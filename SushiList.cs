@@ -37,6 +37,18 @@ namespace PapasDataRia
         {
             dataLoader.UpdateView("SushiRecipiesWithNames", "CreateSushiRecipiesView.sql");
             dataLoader.LoadDataFromView("SushiRecipiesWithNames", dgvSushiList);
+
+            dgvSushiList.Columns["id"].HeaderText = "ID";
+            dgvSushiList.Columns["recipe_name"].HeaderText = "Название";
+            dgvSushiList.Columns["rice_name"].HeaderText = "Рис";
+            dgvSushiList.Columns["wrap_name"].HeaderText = "Обёртка";
+            dgvSushiList.Columns["flipped"].HeaderText = "Перевёрнут?";
+            dgvSushiList.Columns["filling_1st_name"].HeaderText = "Первая начинка";
+            dgvSushiList.Columns["filling_2nd_name"].HeaderText = "Вторая начинка";
+            dgvSushiList.Columns["filling_3rd_name"].HeaderText = "Третья начинка";
+            dgvSushiList.Columns["topping_name"].HeaderText = "Топпинг";
+            dgvSushiList.Columns["shaker_name"].HeaderText = "Посыпка";
+            dgvSushiList.Columns["sauce_name"].HeaderText = "Соус";
         }
 
         private void EditMenuItem_Click(object sender, EventArgs e)

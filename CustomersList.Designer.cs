@@ -109,7 +109,8 @@
             this.Controls.Add(this.AddCustomerButton);
             this.Controls.Add(this.dgvCustomersList);
             this.Name = "CustomersForm";
-            this.Text = "Customers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.CustomersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomersList)).EndInit();
             this.ResumeLayout(false);
