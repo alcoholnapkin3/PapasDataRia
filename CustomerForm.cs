@@ -44,10 +44,10 @@ namespace PapasDataRia
             comboBoxManager.FillComboBox(cbDonutsRecipe, "DonutsRecipies", "name");
 
             if (isNewRecord)
-                this.Text = "Создание рецепта";
+                this.Text = "Добавление посетителя";
             else
             {
-                this.Text = "Редактирование рецепта";
+                this.Text = "Редактирование записи о посетителе";
                 tbName.Enabled = false;
                 tbName.Text = Convert.ToString(selectedRow.Cells[0].Value);
                 if (selectedRow.Cells[1].Value != DBNull.Value) cbPizzaRecipe.Text = Convert.ToString(selectedRow.Cells[1].Value);
@@ -135,6 +135,23 @@ namespace PapasDataRia
                 }
             }
             
+        }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
 }
