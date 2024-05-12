@@ -48,5 +48,22 @@ namespace PapasDataRia
             sandwichesList.ShowDialog();
             this.Show();
         }
+
+        private void pbCloseRecipies_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeRecipies_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
     }
 }
