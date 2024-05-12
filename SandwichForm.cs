@@ -142,5 +142,40 @@ namespace PapasDataRia
             }
             
         }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void cbMeatAndAlternative2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbMeatAndAlternative2.Text = null;
+        }
+
+        private void cbBatterAndBreading2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbBatterAndBreading2.Text = null;
+        }
+
+        private void cbToppingAndSauce6_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbToppingAndSauce6.Text = null;
+        }
     }
 }

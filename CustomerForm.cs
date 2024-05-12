@@ -44,10 +44,10 @@ namespace PapasDataRia
             comboBoxManager.FillComboBox(cbDonutsRecipe, "DonutsRecipies", "name");
 
             if (isNewRecord)
-                this.Text = "Создание рецепта";
+                this.Text = "Добавление посетителя";
             else
             {
-                this.Text = "Редактирование рецепта";
+                this.Text = "Редактирование записи о посетителе";
                 tbName.Enabled = false;
                 tbName.Text = Convert.ToString(selectedRow.Cells[0].Value);
                 if (selectedRow.Cells[1].Value != DBNull.Value) cbPizzaRecipe.Text = Convert.ToString(selectedRow.Cells[1].Value);
@@ -135,6 +135,89 @@ namespace PapasDataRia
                 }
             }
             
+        }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void cbPizzaRecipe_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbPizzaRecipe.Text = null;
+        }
+
+        private void cbPizzaBake_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbPizzaBake.Text = null;
+        }
+
+        private void cbPizzaCut_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbPizzaCut.Text = null;
+        }
+
+        private void cbSushiRecipe_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSushiRecipe.Text = null;
+        }
+
+        private void cbTeaFlavor_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTeaFlavor.Text = null;
+        }
+
+        private void cbTeaBubbles_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTeaBubbles.Text = null;
+        }
+
+        private void cbDonutsRecipe_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbDonutsRecipe.Text = null;
+        }
+
+        private void cbSandwichRecipe_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSandwichRecipe.Text = null;
+        }
+
+        private void cbSlushSize_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSlushSize.Text = null;
+        }
+
+        private void cbSlushFlavor1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSlushFlavor1.Text = null;
+        }
+
+        private void cbSlushFlavor2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSlushFlavor2.Text = null;
         }
     }
 }

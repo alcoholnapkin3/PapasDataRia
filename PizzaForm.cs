@@ -143,18 +143,57 @@ namespace PapasDataRia
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pbCloseMain_Click(object sender, EventArgs e)
         {
-            /* кнопка для debugging-а, потом удалить */
-            
-            MessageBox.Show(Convert.ToString(isNewRecord));
+            this.Close();
+        }
 
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
 
-            /*
-            string name = String.Concat("'", tbName.Text.Replace("'", "''"), "'"); if (name == "''") name = "NULL";
-            MessageBox.Show(name);*/
-            /* to-do: почему не обновляет уникальные символы как "ñ"? */
-            /* Данная кнопка успешно выводит ñ... */
+        private void cbTopping2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTopping2.Text = null;
+        }
+
+        private void cbTopping3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTopping3.Text = null;
+        }
+
+        private void cbTopping4_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTopping4.Text = null;
+        }
+
+        private void cbLocation2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbLocation2.Text = null;
+        }
+
+        private void cbLocation3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbLocation3.Text = null;
+        }
+
+        private void cbLocation4_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbLocation4.Text = null;
         }
     }
 }

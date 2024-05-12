@@ -120,20 +120,67 @@ namespace PapasDataRia
                 }
             }
         }
-
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             string flip = Convert.ToString(Convert.ToInt32(isFlipped.Checked));
 
             MessageBox.Show(flip);
         }
-
+        */
         private void isFlipped_CheckedChanged(object sender, EventArgs e)
         {
             if (isFlipped.Checked)
                 flipLabel.Text = "Рисом наружу, обёрткой к начинке.";
             else
                 flipLabel.Text = "Обёрткой наружу, рисом к начинке.";
+        }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void cbTopping_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbTopping.Text = null;
+        }
+
+        private void cbShaker_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbShaker.Text = null;
+        }
+
+        private void cbSauce_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbSauce.Text = null;
+        }
+
+        private void cbFilling2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbFilling2.Text = null;
+        }
+
+        private void cbFilling3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbFilling3.Text = null;
         }
     }
 }

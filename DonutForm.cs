@@ -181,5 +181,58 @@ namespace PapasDataRia
                 }
             }
         }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void cbFilling1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbFilling1.Text = null;
+        }
+
+        private void cbFilling2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbFilling2.Text = null;
+        }
+
+        private void cbFilling3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbFilling3.Text = null;
+        }
+
+        private void cbExtraSprinkleOrDrizzle1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+               cbExtraSprinkleOrDrizzle1.Text = null;
+        }
+
+        private void cbExtraSprinkleOrDrizzle2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbExtraSprinkleOrDrizzle2.Text = null;
+        }
+
+        private void cbExtraSprinkleOrDrizzle3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+                cbExtraSprinkleOrDrizzle3.Text = null;
+        }
     }
 }

@@ -23,7 +23,8 @@ namespace PapasDataRia
         {
        
         }
-        private void CustomersButton_Click_1(object sender, EventArgs e)
+
+        private void CustomersButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             CustomersForm customers = new CustomersForm();
@@ -31,12 +32,29 @@ namespace PapasDataRia
             this.Show();
         }
 
-        private void RecipiesButton_Click(object sender, EventArgs e)
+        private void RecipiesButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             RecipesForm recipes = new RecipesForm();
             recipes.ShowDialog();
             this.Show();
+        }
+
+        private void pbCloseMain_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pbMinimazeMain_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
 }

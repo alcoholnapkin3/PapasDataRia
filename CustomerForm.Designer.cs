@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,121 +54,137 @@
             this.cbSushiRecipe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbTeaFlavor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbTeaBubbles = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.tbImage = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.SaveCustomerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.pbCloseMain = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbMinimazeMain = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCloseMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimazeMain)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 25);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(81, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(47, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Имя:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 95);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(12, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(121, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Рецепт пиццы:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 137);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.Size = new System.Drawing.Size(148, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Прожарка пиццы:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 179);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(12, 191);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.Size = new System.Drawing.Size(131, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Нарезка пиццы:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(417, 149);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(459, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.Size = new System.Drawing.Size(133, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "Чайный аромат:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(417, 191);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(459, 191);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 13);
+            this.label6.Size = new System.Drawing.Size(149, 21);
             this.label6.TabIndex = 8;
             this.label6.Text = "Чайные пузырьки:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(417, 259);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(459, 259);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 13);
+            this.label7.Size = new System.Drawing.Size(144, 21);
             this.label7.TabIndex = 9;
             this.label7.Text = "Рецепт пончиков:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(12, 259);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.Size = new System.Drawing.Size(140, 21);
             this.label8.TabIndex = 10;
             this.label8.Text = "Рецепт сэндвича:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 315);
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(12, 324);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.Size = new System.Drawing.Size(119, 21);
             this.label9.TabIndex = 11;
             this.label9.Text = "Размер слаша:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 355);
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(12, 366);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 13);
+            this.label10.Size = new System.Drawing.Size(163, 21);
             this.label10.TabIndex = 12;
             this.label10.Text = "Первый вкус слаша:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(417, 95);
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(459, 107);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.Size = new System.Drawing.Size(109, 21);
             this.label11.TabIndex = 13;
             this.label11.Text = "Рецепт суши:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 397);
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(12, 408);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 13);
+            this.label12.Size = new System.Drawing.Size(158, 21);
             this.label12.TabIndex = 14;
             this.label12.Text = "Второй вкус слаша:";
             // 
             // tbName
             // 
+            this.tbName.BorderRadius = 10;
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbName.DefaultText = "";
             this.tbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -176,7 +194,7 @@
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbName.Location = new System.Drawing.Point(163, 12);
+            this.tbName.Location = new System.Drawing.Point(132, 41);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderText = "";
@@ -187,6 +205,7 @@
             // cbPizzaRecipe
             // 
             this.cbPizzaRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.cbPizzaRecipe.BorderRadius = 10;
             this.cbPizzaRecipe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbPizzaRecipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPizzaRecipe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -194,14 +213,16 @@
             this.cbPizzaRecipe.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbPizzaRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbPizzaRecipe.ItemHeight = 30;
-            this.cbPizzaRecipe.Location = new System.Drawing.Point(132, 81);
+            this.cbPizzaRecipe.Location = new System.Drawing.Point(181, 107);
             this.cbPizzaRecipe.Name = "cbPizzaRecipe";
             this.cbPizzaRecipe.Size = new System.Drawing.Size(214, 36);
             this.cbPizzaRecipe.TabIndex = 44;
+            this.cbPizzaRecipe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbPizzaRecipe_KeyUp);
             // 
             // cbPizzaBake
             // 
             this.cbPizzaBake.BackColor = System.Drawing.Color.Transparent;
+            this.cbPizzaBake.BorderRadius = 10;
             this.cbPizzaBake.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbPizzaBake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPizzaBake.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -209,14 +230,16 @@
             this.cbPizzaBake.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbPizzaBake.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbPizzaBake.ItemHeight = 30;
-            this.cbPizzaBake.Location = new System.Drawing.Point(132, 126);
+            this.cbPizzaBake.Location = new System.Drawing.Point(181, 149);
             this.cbPizzaBake.Name = "cbPizzaBake";
             this.cbPizzaBake.Size = new System.Drawing.Size(214, 36);
             this.cbPizzaBake.TabIndex = 45;
+            this.cbPizzaBake.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbPizzaBake_KeyUp);
             // 
             // cbPizzaCut
             // 
             this.cbPizzaCut.BackColor = System.Drawing.Color.Transparent;
+            this.cbPizzaCut.BorderRadius = 10;
             this.cbPizzaCut.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbPizzaCut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPizzaCut.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -224,14 +247,16 @@
             this.cbPizzaCut.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbPizzaCut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbPizzaCut.ItemHeight = 30;
-            this.cbPizzaCut.Location = new System.Drawing.Point(132, 168);
+            this.cbPizzaCut.Location = new System.Drawing.Point(181, 191);
             this.cbPizzaCut.Name = "cbPizzaCut";
             this.cbPizzaCut.Size = new System.Drawing.Size(214, 36);
             this.cbPizzaCut.TabIndex = 46;
+            this.cbPizzaCut.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbPizzaCut_KeyUp);
             // 
             // cbSandwichRecipe
             // 
             this.cbSandwichRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.cbSandwichRecipe.BorderRadius = 10;
             this.cbSandwichRecipe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSandwichRecipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSandwichRecipe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -239,14 +264,16 @@
             this.cbSandwichRecipe.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSandwichRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSandwichRecipe.ItemHeight = 30;
-            this.cbSandwichRecipe.Location = new System.Drawing.Point(132, 246);
+            this.cbSandwichRecipe.Location = new System.Drawing.Point(181, 259);
             this.cbSandwichRecipe.Name = "cbSandwichRecipe";
             this.cbSandwichRecipe.Size = new System.Drawing.Size(214, 36);
             this.cbSandwichRecipe.TabIndex = 47;
+            this.cbSandwichRecipe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbSandwichRecipe_KeyUp);
             // 
             // cbSlushSize
             // 
             this.cbSlushSize.BackColor = System.Drawing.Color.Transparent;
+            this.cbSlushSize.BorderRadius = 10;
             this.cbSlushSize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSlushSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSlushSize.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -254,14 +281,16 @@
             this.cbSlushSize.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSlushSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSlushSize.ItemHeight = 30;
-            this.cbSlushSize.Location = new System.Drawing.Point(132, 302);
+            this.cbSlushSize.Location = new System.Drawing.Point(181, 324);
             this.cbSlushSize.Name = "cbSlushSize";
             this.cbSlushSize.Size = new System.Drawing.Size(214, 36);
             this.cbSlushSize.TabIndex = 48;
+            this.cbSlushSize.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbSlushSize_KeyUp);
             // 
             // cbSlushFlavor1
             // 
             this.cbSlushFlavor1.BackColor = System.Drawing.Color.Transparent;
+            this.cbSlushFlavor1.BorderRadius = 10;
             this.cbSlushFlavor1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSlushFlavor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSlushFlavor1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -269,14 +298,16 @@
             this.cbSlushFlavor1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSlushFlavor1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSlushFlavor1.ItemHeight = 30;
-            this.cbSlushFlavor1.Location = new System.Drawing.Point(132, 344);
+            this.cbSlushFlavor1.Location = new System.Drawing.Point(181, 366);
             this.cbSlushFlavor1.Name = "cbSlushFlavor1";
             this.cbSlushFlavor1.Size = new System.Drawing.Size(214, 36);
             this.cbSlushFlavor1.TabIndex = 49;
+            this.cbSlushFlavor1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbSlushFlavor1_KeyUp);
             // 
             // cbSlushFlavor2
             // 
             this.cbSlushFlavor2.BackColor = System.Drawing.Color.Transparent;
+            this.cbSlushFlavor2.BorderRadius = 10;
             this.cbSlushFlavor2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSlushFlavor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSlushFlavor2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -284,14 +315,16 @@
             this.cbSlushFlavor2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSlushFlavor2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSlushFlavor2.ItemHeight = 30;
-            this.cbSlushFlavor2.Location = new System.Drawing.Point(132, 386);
+            this.cbSlushFlavor2.Location = new System.Drawing.Point(181, 408);
             this.cbSlushFlavor2.Name = "cbSlushFlavor2";
             this.cbSlushFlavor2.Size = new System.Drawing.Size(214, 36);
             this.cbSlushFlavor2.TabIndex = 50;
+            this.cbSlushFlavor2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbSlushFlavor2_KeyUp);
             // 
             // cbDonutsRecipe
             // 
             this.cbDonutsRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.cbDonutsRecipe.BorderRadius = 10;
             this.cbDonutsRecipe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbDonutsRecipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDonutsRecipe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -299,14 +332,16 @@
             this.cbDonutsRecipe.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbDonutsRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbDonutsRecipe.ItemHeight = 30;
-            this.cbDonutsRecipe.Location = new System.Drawing.Point(534, 246);
+            this.cbDonutsRecipe.Location = new System.Drawing.Point(609, 259);
             this.cbDonutsRecipe.Name = "cbDonutsRecipe";
             this.cbDonutsRecipe.Size = new System.Drawing.Size(214, 36);
             this.cbDonutsRecipe.TabIndex = 51;
+            this.cbDonutsRecipe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbDonutsRecipe_KeyUp);
             // 
             // cbSushiRecipe
             // 
             this.cbSushiRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.cbSushiRecipe.BorderRadius = 10;
             this.cbSushiRecipe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSushiRecipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSushiRecipe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -314,14 +349,16 @@
             this.cbSushiRecipe.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSushiRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSushiRecipe.ItemHeight = 30;
-            this.cbSushiRecipe.Location = new System.Drawing.Point(534, 81);
+            this.cbSushiRecipe.Location = new System.Drawing.Point(609, 107);
             this.cbSushiRecipe.Name = "cbSushiRecipe";
             this.cbSushiRecipe.Size = new System.Drawing.Size(214, 36);
             this.cbSushiRecipe.TabIndex = 52;
+            this.cbSushiRecipe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbSushiRecipe_KeyUp);
             // 
             // cbTeaFlavor
             // 
             this.cbTeaFlavor.BackColor = System.Drawing.Color.Transparent;
+            this.cbTeaFlavor.BorderRadius = 10;
             this.cbTeaFlavor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbTeaFlavor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTeaFlavor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -329,14 +366,16 @@
             this.cbTeaFlavor.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbTeaFlavor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbTeaFlavor.ItemHeight = 30;
-            this.cbTeaFlavor.Location = new System.Drawing.Point(534, 137);
+            this.cbTeaFlavor.Location = new System.Drawing.Point(609, 149);
             this.cbTeaFlavor.Name = "cbTeaFlavor";
             this.cbTeaFlavor.Size = new System.Drawing.Size(214, 36);
             this.cbTeaFlavor.TabIndex = 53;
+            this.cbTeaFlavor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbTeaFlavor_KeyUp);
             // 
             // cbTeaBubbles
             // 
             this.cbTeaBubbles.BackColor = System.Drawing.Color.Transparent;
+            this.cbTeaBubbles.BorderRadius = 10;
             this.cbTeaBubbles.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbTeaBubbles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTeaBubbles.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -344,63 +383,67 @@
             this.cbTeaBubbles.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbTeaBubbles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbTeaBubbles.ItemHeight = 30;
-            this.cbTeaBubbles.Location = new System.Drawing.Point(534, 179);
+            this.cbTeaBubbles.Location = new System.Drawing.Point(609, 191);
             this.cbTeaBubbles.Name = "cbTeaBubbles";
             this.cbTeaBubbles.Size = new System.Drawing.Size(214, 36);
             this.cbTeaBubbles.TabIndex = 54;
-            // 
-            // tbImage
-            // 
-            this.tbImage.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbImage.DefaultText = "*адрес файла*";
-            this.tbImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbImage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbImage.Enabled = false;
-            this.tbImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbImage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbImage.Location = new System.Drawing.Point(534, 332);
-            this.tbImage.Name = "tbImage";
-            this.tbImage.PasswordChar = '\0';
-            this.tbImage.PlaceholderText = "";
-            this.tbImage.SelectedText = "";
-            this.tbImage.Size = new System.Drawing.Size(200, 36);
-            this.tbImage.TabIndex = 55;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(417, 344);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 13);
-            this.label13.TabIndex = 56;
-            this.label13.Text = "Изображение:";
+            this.cbTeaBubbles.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbTeaBubbles_KeyUp);
             // 
             // SaveCustomerButton
             // 
+            this.SaveCustomerButton.BorderRadius = 10;
             this.SaveCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.SaveCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.SaveCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SaveCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveCustomerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SaveCustomerButton.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.SaveCustomerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.SaveCustomerButton.Location = new System.Drawing.Point(483, 444);
+            this.SaveCustomerButton.Location = new System.Drawing.Point(552, 440);
             this.SaveCustomerButton.Name = "SaveCustomerButton";
             this.SaveCustomerButton.Size = new System.Drawing.Size(180, 45);
             this.SaveCustomerButton.TabIndex = 57;
             this.SaveCustomerButton.Text = "Сохранить";
             this.SaveCustomerButton.Click += new System.EventHandler(this.SaveCustomerButton_Click);
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.BorderRadius = 30;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // pbCloseMain
+            // 
+            this.pbCloseMain.Image = global::PapasDataRia.Properties.Resources.icons8_закрыть_окно_26;
+            this.pbCloseMain.ImageRotate = 0F;
+            this.pbCloseMain.Location = new System.Drawing.Point(790, 12);
+            this.pbCloseMain.Name = "pbCloseMain";
+            this.pbCloseMain.Size = new System.Drawing.Size(36, 33);
+            this.pbCloseMain.TabIndex = 58;
+            this.pbCloseMain.TabStop = false;
+            this.pbCloseMain.Click += new System.EventHandler(this.pbCloseMain_Click);
+            // 
+            // pbMinimazeMain
+            // 
+            this.pbMinimazeMain.Image = global::PapasDataRia.Properties.Resources.icons8_свернуть_окно_26;
+            this.pbMinimazeMain.ImageRotate = 0F;
+            this.pbMinimazeMain.Location = new System.Drawing.Point(757, 12);
+            this.pbMinimazeMain.Name = "pbMinimazeMain";
+            this.pbMinimazeMain.Size = new System.Drawing.Size(27, 33);
+            this.pbMinimazeMain.TabIndex = 59;
+            this.pbMinimazeMain.TabStop = false;
+            this.pbMinimazeMain.Click += new System.EventHandler(this.pbMinimazeMain_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 516);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(838, 516);
+            this.Controls.Add(this.pbMinimazeMain);
+            this.Controls.Add(this.pbCloseMain);
             this.Controls.Add(this.SaveCustomerButton);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.tbImage);
             this.Controls.Add(this.cbTeaBubbles);
             this.Controls.Add(this.cbTeaFlavor);
             this.Controls.Add(this.cbSushiRecipe);
@@ -425,9 +468,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerForm";
             this.Text = "Клиент";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCloseMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimazeMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,8 +506,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbSushiRecipe;
         private Guna.UI2.WinForms.Guna2ComboBox cbTeaFlavor;
         private Guna.UI2.WinForms.Guna2ComboBox cbTeaBubbles;
-        private Guna.UI2.WinForms.Guna2TextBox tbImage;
-        private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button SaveCustomerButton;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2PictureBox pbCloseMain;
+        private Guna.UI2.WinForms.Guna2PictureBox pbMinimazeMain;
     }
 }
